@@ -33,8 +33,6 @@ class Piege:
         self.L = []
     def add(self,x,y):
         self.L.append((x,y))
-    def delete(self,x,y):
-        self.L.remove((x,y))
 
 class Renard:
     def __init__(self):
@@ -138,7 +136,6 @@ while running:
         for (x,y) in Pg.L:
             if (x,y) in Rd.L:
                 Rd.capture(x,y)
-                Pg.delete(x,y)
 
         #Déplacement des renards
         Rd.move(Lp.x,Lp.y)
